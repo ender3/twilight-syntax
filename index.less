@@ -7,9 +7,22 @@
   opacity: 0.1;
 }
 
+.editor {
+  background-color: rgb(32, 32, 32);
+}
+
+.editor .gutter {
+  background-color: rgb(62, 62, 64);
+  border-right: 1px solid rgb(83, 83, 85);
+  margin-right: 8px;
+}
+
 .editor, .editor .gutter {
-  background-color: #141414;
-  color: #F8F8F8;
+  color: rgb(198,198,198);
+}
+
+.editor .gutter .line-number .icon-right {
+  padding-right: 0.2em;
 }
 
 .editor.is-focused .cursor {
@@ -20,8 +33,13 @@
   background-color: rgba(221, 240, 255, 0.2);
 }
 
-.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
-  background-color: rgba(166, 148, 66, 0);
+
+.editor.is-focused .line.cursor-line {
+  background-color: rgba(83, 83, 85, 0.25);
+}
+
+.editor.is-focused .line-number.cursor-line-no-selection {
+  background-color: rgb(83, 83, 85);
 }
 
 .comment {
@@ -66,10 +84,6 @@
 .invalid.illegal {
   color: #F8F8F8;
   background-color: rgba(86, 45, 86, 0.75);
-}
-
-.text .source {
-  background-color: rgba(176, 179, 186, 0.08);
 }
 
 .text.html.ruby .source {
